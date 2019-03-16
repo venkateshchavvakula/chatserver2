@@ -1,0 +1,29 @@
+<html ng-app="app"  ng-controller="home">
+    <head>
+        <title>Sending message to specific client</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div class="app-header">
+            <h2> Hello {{UI.username}}</h2>
+            <div class="logout" ng-click='logout()'>Logout</div>
+        </div>
+        <div class="container">
+            <div class="row users-list">
+                <div ng-repeat='result in UI.results' ng-class='getClassName(result.online)' class="list col-md-12">
+                    <h3>{{result.username}}</h3>
+                    <p>User Status: {{getOnlineStatus(result.online)}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="app-footer">
+            <a href="http://www.codershood.info/2015/12/10/showing-online-users-using-nodejs-socket-io/" target="_blank">Read full Tutorial with explanation</a>
+        </div>
+    </body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/service.js"></script>
+    <script src="../js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</html>
