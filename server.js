@@ -43,6 +43,7 @@ class Server{
 
         this.appConfig();
         this.includeRoutes();
+constPORT = process.env.PORT || 3000; server=app.listen(PORT, () => { console.log(`Our app is running on port ${ PORT }`); });
 
         //this.http.listen(this.port, this.host, () => {
            // console.log(`Listening on http://${this.host}:${this.port}`);
@@ -50,7 +51,6 @@ class Server{
     }
 
 }
-constPORT = process.env.PORT || 3000; server=app.listen(PORT, () => { console.log(`Our app is running on port ${ PORT }`); });
 
 
 
