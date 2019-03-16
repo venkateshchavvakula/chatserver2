@@ -4,7 +4,7 @@ const  mongodb=require('mongodb');
 const MongoClient = mongodb.MongoClient;
 const ObjectID = mongodb.ObjectID;
 const assert = require('assert');
-const MongoUrl='mongodb://localhost:27017/onlineshowing';
+const MongoUrl='mongodb://venki519:venki519@ds161285.mlab.com:61285/chatserver';
 
 module.exports.onConnect = (callback) => {	
 
